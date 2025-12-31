@@ -181,16 +181,6 @@
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
 }
 
-.hero-book::after {
-  content: '\\1F409';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  opacity: 0.8;
-}
-
 /* ============================================
    FILTERS SECTION
    ============================================ */
