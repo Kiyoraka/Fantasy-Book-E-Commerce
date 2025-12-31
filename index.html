@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fantasy Book E-Commerce - Discover magical worlds through our curated collection of fantasy novels">
+  <meta name="keywords" content="fantasy books, novels, epic fantasy, dark fantasy, book store">
+  <title>Fantasy Books - Discover Magical Worlds</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles/base.css">
+  <link rel="stylesheet" href="assets/styles/components.css">
+  <link rel="stylesheet" href="assets/styles/landing.css">
+  <link rel="stylesheet" href="assets/styles/modal.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">&#128214;</span>
+          <span class="logo-text">Fantasy Books</span>
+        </a>
+
+        <div class="nav-search">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search books by title, author, or genre..."
+          >
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" id="trackOrderBtn">
+            <span class="btn-icon">&#128269;</span>
+            Track Order
+          </button>
+          <a href="cart.html" class="btn btn-outline cart-btn">
+            <span class="btn-icon">&#128722;</span>
+            Cart
+            <span class="cart-badge" id="cartBadge">0</span>
+          </a>
+          <a href="dashboard.html" class="btn btn-ghost admin-link">
+            Admin
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Magical Worlds</h1>
+        <p class="hero-subtitle">Explore our curated collection of fantasy novels that will transport you to realms of dragons, magic, and adventure.</p>
+        <a href="#books" class="btn btn-accent btn-lg">Browse Collection</a>
+      </div>
+      <div class="hero-decoration">
+        <div class="hero-book"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filters" id="books">
+    <div class="container">
+      <div class="filters-bar">
+        <div class="filters-left">
+          <h2 class="section-title">Our Collection</h2>
+          <span class="book-count" id="bookCount">10 Books</span>
+        </div>
+        <div class="filters-right">
+          <div class="filter-group">
+            <label for="genreFilter" class="filter-label">Genre:</label>
+            <select id="genreFilter" class="form-select filter-select">
+              <option value="">All Genres</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sortFilter" class="filter-label">Sort by:</label>
+            <select id="sortFilter" class="form-select filter-select">
+              <option value="title-asc">Title (A-Z)</option>
+              <option value="title-desc">Title (Z-A)</option>
+              <option value="price-asc">Price (Low to High)</option>
+              <option value="price-desc">Price (High to Low)</option>
+              <option value="rating-desc">Rating (Highest)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Grid -->
+  <section class="books-section">
+    <div class="container">
+      <div class="books-grid" id="booksGrid">
+        <!-- Books will be rendered by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state hidden" id="emptyState">
+        <div class="empty-state-icon">&#128218;</div>
+        <h3 class="empty-state-title">No books found</h3>
+        <p class="empty-state-text">Try adjusting your search or filter criteria</p>
+        <button class="btn btn-primary" id="clearFiltersBtn">Clear Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#128666;</div>
+          <h3 class="feature-title">Free Shipping</h3>
+          <p class="feature-text">Free delivery on orders over RM100</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128274;</div>
+          <h3 class="feature-title">Secure Payment</h3>
+          <p class="feature-text">100% secure payment processing</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128222;</div>
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-text">Round-the-clock customer service</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128260;</div>
+          <h3 class="feature-title">Easy Returns</h3>
+          <p class="feature-text">30-day hassle-free returns</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">&#128214;</span>
+          <span class="logo-text">Fantasy Books</span>
+          <p class="footer-tagline">Your gateway to magical worlds</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#books">Browse Books</a></li>
+              <li><a href="cart.html">Shopping Cart</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Customer Service</h4>
+            <ul class="footer-list">
+              <li><a href="#" id="footerTrackOrder">Track Order</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Contact Us</h4>
+            <ul class="footer-list">
+              <li>Email: support@fantasybooks.com</li>
+              <li>Phone: +60 12-345 6789</li>
+              <li>Hours: 9AM - 6PM (Mon-Sat)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fantasy Books. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Order Tracking Modal -->
+  <div class="modal-overlay" id="trackingModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Track Your Order</h2>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Search Section -->
+        <div class="tracking-search">
+          <div class="search-type-toggle">
+            <button class="toggle-btn active" data-type="phone">By Phone</button>
+            <button class="toggle-btn" data-type="orderId">By Order ID</button>
+          </div>
+          <div class="tracking-input-group">
+            <input
+              type="text"
+              id="trackingInput"
+              class="form-input"
+              placeholder="Enter your phone number..."
+            >
+            <button class="btn btn-primary" id="searchOrderBtn">Search</button>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="modal-tabs">
+          <button class="tab-btn active" data-tab="current">Current Orders</button>
+          <button class="tab-btn" data-tab="past">Past Orders</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="currentOrdersTab">
+          <div class="orders-list" id="currentOrdersList">
+            <!-- Orders will be rendered by JavaScript -->
+          </div>
+          <div class="empty-state hidden" id="noCurrentOrders">
+            <div class="empty-state-icon">&#128230;</div>
+            <p class="empty-state-text">No current orders found</p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pastOrdersTab">
+          <div class="orders-list" id="pastOrdersList">
+            <!-- Orders will be rendered by JavaScript -->
+          </div>
+          <div class="empty-state hidden" id="noPastOrders">
+            <div class="empty-state-icon">&#128203;</div>
+            <p class="empty-state-text">No past orders found</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/landing.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
