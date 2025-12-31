@@ -99,7 +99,6 @@ function generateStorePageNumbers(currentPage, totalPages) {
  */
 function renderStorePagination() {
   const pagesContainer = $('#storePageNumbers');
-  const rangeText = $('#storeRangeText');
   const prevBtn = $('#storePrevBtn');
   const nextBtn = $('#storeNextBtn');
   const paginationEl = $('#storePagination');
@@ -113,13 +112,6 @@ function renderStorePagination() {
   }
 
   if (paginationEl) paginationEl.style.display = 'flex';
-
-  // Update range text
-  const start = (storePagination.currentPage - 1) * storePagination.perPage + 1;
-  const end = Math.min(storePagination.currentPage * storePagination.perPage, storePagination.totalItems);
-  if (rangeText) {
-    rangeText.textContent = `${start}-${end} of ${storePagination.totalItems}`;
-  }
 
   // Update prev/next buttons
   if (prevBtn) {
